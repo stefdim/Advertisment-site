@@ -1,0 +1,456 @@
+body {
+
+    background-color: rgb(245, 241, 229);
+    /*Χρώμα της σελίδας*/
+    width: 100vw;
+    height: 100vh;
+    /*viewport height υψος σελιδας*/
+    display: grid;
+    /*Χωριζει την σελιδα σε τομεις ωστε να ειναι ευκολοτερη η στοιχιση τους*/
+    grid-template-rows: auto 1fr auto;
+    /*fractional unit μοναδα μετρησης, θετουμε 0 διαφορετικα μπαινει το auto*/
+    font-family: Helvetica;
+    padding: 0px;
+    margin: 0px;
+    overflow-x:hidden;
+}
+
+ul {
+    list-style: none;
+    /*εμφανιση λιστας, βγαζει τελειες, αριθμους κλπ οταν ειναι none*/
+}
+
+
+main {
+    margin-top: auto;
+    /* το margin χρησιμοποιειται για στοιχιση */
+    margin-bottom: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 0;
+
+}
+
+img{
+    max-width: 100%;
+}
+
+.index-links{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; 
+}
+
+
+
+/* Κωδικας για το navbar */
+.navbar {
+    width: 100vw;
+    display: flex;
+    background-color: black;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    display: flex;
+    background-color: black;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 5px;
+    margin-right: 5vw;
+    font-size: larger;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar .navbarlogo {
+    float: left;
+    height: 100px;
+    width: 140px;
+}
+
+.navbar .navbarlogo:hover {
+    background-color: #000000;
+}
+
+.navbar a:hover {
+    transition: 0.5s;
+    /*pseudo-class ενεργει οταν ο κερσορας περνα πανω απο καποιο element*/
+    background-color: rgb(222, 127, 10);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.navbar a:active {
+    transition: 0s;
+    background-color: #dadada;
+    /*pseudo-class αλλαζει το χρωμα οταν παταμε/κλικαρουμε ενα συνδεσμο*/
+    color: rgb(0, 0, 0);
+}
+
+.navbar-link {
+
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.navbar-link.show {
+    
+    opacity: 1;
+}
+
+
+/* Κωδικας για το Popular sidebar */
+.sidebar {
+    
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 80vw;
+    width:fit-content;
+    /*πλατος= μεχρι να χωρεσει το περιεχομενο*/
+    text-align: left;
+    float: left;
+    /*αφηνει το υπολοιπο περιεχομενο να το "τυλιξει",επιπλεει κατα καποιο τροπο στην σελιδα*/
+     height: 350px;
+     transition: transform 1s; /* Προσθήκη transition για το transform */
+
+}
+.sidebar:hover {
+    transform: scale(1.1);
+}
+#sidetitle {
+    text-decoration: none;
+    display: block;
+    color: rgb(222, 127, 10);
+    text-align: center;
+    transition: color 0.5s; /* Προσθήκη transition για το χρώμα */
+}
+
+
+.sidebar a {
+    display: block;
+    /*καθε συνδεσμος ειναι ενα block element σε ξεχωριστη γραμμη*/
+    background-color: rgb(245, 241, 229);
+    text-decoration: none;
+    padding: 20px 20px 20px 20px;
+    height: fit-content;
+    color: #000000;
+    transition: background-color 0.5s; /* Προσθήκη transition για το background-color */
+
+}
+
+.sidebar a:hover {
+    background-color: rgb(226, 223, 214);
+    border-radius: 5px;
+
+}
+
+.sidebar ul {
+    padding-left: 0;
+    list-style: none;
+    transition: border-left 0.5s, padding-left 0.5s; /* Προσθήκη transition για το border και το padding */
+
+}
+
+
+.indexarticles {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  
+
+}
+
+/* Κωδικας απο την σελιδα με τις 4 κατηγοριες αντικειμενων προς πωληση */
+.categ {
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+}
+
+.categ ul {
+    padding-left: 0;
+    float: left;
+}
+
+.categ li {
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    transition: margin-left 0.3s;
+    width: 14vw;
+    /* Set a fixed width for each list item */
+
+}
+
+.categ ul:hover {
+    border-left: 1px solid black;
+    padding-left: 5%;
+    transition: 0.5s;
+}
+
+
+/* Κωδικας που χρησιμοποιειτε απο τις σελιδες που εχουν αγγελιες απο αμαξια και ακινητα */
+.options {
+
+    width: auto;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: small;
+
+}
+
+
+.options table {
+    display: inline-block;
+
+}
+
+.options p {
+    margin-top: 20px;
+}
+
+table:hover {
+    border-left: 1px solid black;
+    margin: 1%;
+    padding-left: 10px;
+    transition: 1s;
+    overflow: visible;
+}
+
+.contactdetails {
+    padding-top: 10px;
+    float: left;
+    text-align: center;
+    width: 50%;
+}
+
+.contactdetails li {
+    display: inline;
+    margin: 5px;
+}
+
+.socialmedia {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.socialmedia li {
+    display: inline;
+}
+
+#copyright {
+    text-align: center;
+}
+
+.home-container {
+    padding: 5vw;
+    text-align: center;
+}
+
+.home-info-table {
+    text-align: left;
+    padding: 5vw;
+}
+
+.home-back-button{
+    padding-bottom: 10px;
+}
+
+/* Κωδικας για το contact page */
+
+
+.costum-form{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-self: center;
+    justify-self: center;
+}
+
+form {
+    display: inline-block;
+    width: 40vw;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Helvetica;
+
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select  {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="button"] {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    padding: 10px;
+    background-color: rgb(222, 127, 10);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+
+
+}
+
+input[type="button"]:hover {
+    background-color: rgb(169, 97, 9);
+}
+
+/* επηρεαζει ολους τους τιτλους πανω απο τα input forms */
+form>* {
+    margin-bottom: 15px;
+}
+
+form input[type="button"] {
+    margin-top: 10px;
+}
+
+
+/* container που περιεχει text και picture για καθε μελος της ομαδας */
+.team-member {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 50px;
+}
+
+/* διευκρινησεις για τις εικονες που ανηκουν στην κλαση team-member */
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.button {
+    text-decoration: none;
+    background-color: black;
+    color: #efefef;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #202020;
+}
+
+.button:active {
+    background-color: rgb(223, 219, 206);
+    color: #000000;
+}
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    padding: 10px;
+    background-color: rgb(222, 127, 10);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+
+
+}
+
+/* footer */
+
+footer {
+    margin-top: auto;
+    height: 150px;
+    background-color: black;
+    color: rgb(221, 221, 221);
+}
+
+
+@media(max-width: 1000px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        flex-direction: column;
+        /* Change to column */
+
+    }
+
+    .navbar a {
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Add margin to create space between links */
+    }
+
+    .navbar .navbarlogo {
+        float: none;
+    }
+
+    .sidebar {
+        display: inline;
+        width: 100%;
+
+    }
+
+    #sidetitle {
+        display: flex;
+    }
+
+    .second-column{
+        grid-column: 2;
+    }
+}
+@media(max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        /* Change to column */
+
+    }
+
+    .navbar a {
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Add margin to create space between links */
+    }
+
+    .navbar .navbarlogo {
+        float: none;
+    }
+
+    .sidebar {
+        display: inline;
+        width: 100%;
+
+    }
+
+    #sidetitle {
+        display: flex;
+    }
+    .second-column{
+        grid-column: auto;
+    }
+}
+

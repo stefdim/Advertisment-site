@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Contact Form</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Αγγελίες">
+    <meta name="keywords" content="Πώληση,Ενοικίαση,Επικοινωνία">
+    <meta name="author" content="AdsAueb">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    
+    <script src="app.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar">
+            <a href="index.html" class="navbarlogo navbar-link"><img src="images/navbarlogo.jpg" alt="logo"></a>
+            <a href="index.html" class="navbar-link" id="homepage">Home</a>
+            <a href="categories.html" class="navbar-link">Categories</a>
+            <a href="about-us.html" class="navbar-link">About Us</a>
+            <a href="contact-form.html" class="navbar-link">Contact</a>
+            <a href="sign-up.html" class="navbar-link">Sign Up</a>
+        </nav>
+
+    </header>
+    <main>
+
+
+
+        <aside class="sidebar navbar-link">
+            <h3><i id="sidetitle">Popular</i></h3>
+            <ul class="sidelist">
+
+                <li><a href="home-rentals.html" class="navbar-link">Ενοικίαση Κατοικίας</a></li>
+                <li><a href="car-rentals.html" class="navbar-link"> Ενοικίαση Αυτοκινήτου</a></li>
+                <li><a href="contact-form.html" class="navbar-link">Contact Form</a></li>
+                <li><a href="home-rentals-123-details(4).html" class="navbar-link">Διαμερισμα, 42τ.μ.</a></li>
+            </ul>
+        </aside>
+
+        <div class="costum-form navbar-link">
+            <h2>Επικοινώνησε μαζί μας!</h2>
+            <form  id="contactForm">
+               
+                <label for="fname">Ονομα:</label><br>
+                <input type="text" id="fname" name="fname" size="40" placeholder="Εισάγετε όνομα" autocomplete="given-name"  required><br><br>
+
+                <label for="lname">Επίθετο:</label><br>
+                <input type="text" id="lname" name="lname" size="40" placeholder="Εισάγετε επίθετο" autocomplete="family-name"  required><br><br>
+
+                <label for="email">Ηλεκτρονική Διεύθυνση:</label><br>
+                <input type="email" id="email" name="email" size="40" placeholder="Εισάγετε email" required><br><br>
+
+                <label for="phone">Τηλέφωνο:</label><br>
+                <input type="tel" id="phone" name="phone" size="40" placeholder="Εισάγετε τηλέφωνο"><br><br>
+
+                <label for="ordercode">Κωδικός Αγγελίας:</label><br>
+                <input type="text" id="ordercode" name="ordercode" size="40"
+                    placeholder="Εισάγετε κωδικό αγγελίας"><br><br>
+
+                <label for="description">Περιγραφή Προβλήματος:</label><br>
+                <input type="text" id="description" name="description" size="40"
+                    placeholder="Περιγράψτε το ζήτημα"><br><br>
+
+                <input id="btnSubmit" type="submit" value="Αποστολή" onclick="myFunction()">
+                
+            </form>
+            <p id="succesMessage" width="50" height="20"></p>
+
+
+
+
+
+        </div>
+
+
+
+    </main>
+    <footer>
+
+
+        <address class="footer">
+            <div class="contactdetails">
+                <cite>Contact</cite>
+                <ul>
+                    <li>+301234567890</li>
+                    <li>abcd@mail.com</li>
+
+                </ul>
+            </div>
+            <div class="socialmedia">
+                <cite>Follow Us</cite>
+                <ul>
+                    <li><a href="https://www.facebook.com/auebgreece/" title="facebook"><img id="fb" src="images/fb.png"
+                                alt="facebook" width="20"></a></li>
+                    <li><a href="https://www.instagram.com/aueb.gr/?hl=en" title="instagram"><img id="insta"
+                                src="images/insta.png" alt="instagram" width="20"></a></li>
+                    <li><a href="https://www.linkedin.com/school/athens-university-of-economics-and-business/"
+                            title="linkedin"><img id="lin" src="images/lnkedin.png" alt="linkedin" width="20"></a></li>
+                </ul>
+            </div>
+        </address>
+        <section id="copyright">
+            <h5>&copy;Copyright, ADA</h5>
+        </section>
+    </footer>
+    
+</body>
+
+</html>
